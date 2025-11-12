@@ -52,26 +52,62 @@ The addition of an integral term to the controller ( ) tends to help reduce stea
 	Determine the steady state error and analyse the controllers.
 ## Program: 
 ### Without Controller (Open loop System)
+num=[1]
+den=[1 10 20]
+sys=tf(num,den)
+subplot(2,2,1)
+step(sys)
+title('open loop system')
 
 
 ### With P-Controller
+Kp=300;
+c1=pid(Kp)
+G1=feedback(c1*sys,1)
+subplot(2,2,2)
+step(G1)
+title('P-CONTROLLER')
 
 ### With PI Controller
+Kp=30;
+Ki=70;
+c2=pid(Kp,Ki)
+G2=feedback(c2*sys,1)
+subplot(2,2,3)
+step(G2)
+title('Pi-CONTROLLER')
 
 ### With PID Controller
+Kp=350;
+Ki=300;
+Kd=50;
+c3=pid(Kp,Ki,Kd)
+G3=feedback(c3*sys,1)
+subplot(2,2,4)
+step(G3)
+title('Pid-CONTROLLER')
 
 ## Output: 
 ### Without Controller (Open loop System)
 
+<img width="776" height="369" alt="Screenshot 2025-11-12 162404" src="https://github.com/user-attachments/assets/4a941df7-afbe-4b69-8e73-531481c66eeb" />
+
+
+
+
 
 ### With P-Controller
 
-### With PI Controller
+##<img width="775" height="380" alt="Screenshot 2025-11-12 162354" src="https://github.com/user-attachments/assets/f5d2e446-ff80-4049-ae33-e4297e5ec594" />
+
+# With PI Controller
+
+<img width="776" height="400" alt="Screenshot 2025-11-12 162339" src="https://github.com/user-attachments/assets/4f00dbe6-d323-41eb-a3e1-6cd160198f3c" />
 
 ### With PID Controller
+## R<img width="1023" height="532" alt="Screenshot 2025-11-12 162313" src="https://github.com/user-attachments/assets/d61e0283-69f3-4fca-b715-86f07a3e75df" />
 
-
-## Result:
+esult:
 Thus the P, PI and PID controllers for the given system was analysed and the following conclusions were arrived using MATLAB. <br>
 ### With-out controller 
 Delay time =         <br>
