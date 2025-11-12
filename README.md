@@ -52,40 +52,40 @@ The addition of an integral term to the controller ( ) tends to help reduce stea
 	Determine the steady state error and analyse the controllers.
 ## Program: 
 ### Without Controller (Open loop System)
-num=[1]
-den=[1 10 20]
-sys=tf(num,den)
-subplot(2,2,1)
-step(sys)
-title('open loop system')
+num=[1] <br>
+den=[1 10 20] <br>
+sys=tf(num,den) <br>
+subplot(2,2,1) <br>
+step(sys) <br>
+title('open loop system') <br>
 
 
 ### With P-Controller
-Kp=300;
-c1=pid(Kp)
-G1=feedback(c1*sys,1)
-subplot(2,2,2)
-step(G1)
-title('P-CONTROLLER')
+Kp=300; <br>
+c1=pid(Kp) <br>
+G1=feedback(c1*sys,1) <br>
+subplot(2,2,2) <br>
+step(G1) <br>
+title('P-CONTROLLER') <br>
 
 ### With PI Controller
-Kp=30;
-Ki=70;
-c2=pid(Kp,Ki)
-G2=feedback(c2*sys,1)
-subplot(2,2,3)
-step(G2)
-title('Pi-CONTROLLER')
+Kp=30; <br>
+Ki=70; <br>
+c2=pid(Kp,Ki) <br>
+G2=feedback(c2*sys,1) <br>
+subplot(2,2,3) <br>
+step(G2) <br>
+title('Pi-CONTROLLER') <br>
 
 ### With PID Controller
-Kp=350;
-Ki=300;
-Kd=50;
-c3=pid(Kp,Ki,Kd)
-G3=feedback(c3*sys,1)
-subplot(2,2,4)
-step(G3)
-title('Pid-CONTROLLER')
+Kp=350; <br>
+Ki=300; <br>
+Kd=50; <br>
+c3=pid(Kp,Ki,Kd) <br>
+G3=feedback(c3*sys,1) <br>
+subplot(2,2,4) <br>
+step(G3) <br
+title('Pid-CONTROLLER') <br>
 
 ## Output: 
 ### Without Controller (Open loop System)
@@ -98,41 +98,41 @@ title('Pid-CONTROLLER')
 
 ### With P-Controller
 
-##<img width="775" height="380" alt="Screenshot 2025-11-12 162354" src="https://github.com/user-attachments/assets/f5d2e446-ff80-4049-ae33-e4297e5ec594" />
+<img width="775" height="380" alt="Screenshot 2025-11-12 162354" src="https://github.com/user-attachments/assets/f5d2e446-ff80-4049-ae33-e4297e5ec594" />
 
-# With PI Controller
+### With PI Controller
 
 <img width="776" height="400" alt="Screenshot 2025-11-12 162339" src="https://github.com/user-attachments/assets/4f00dbe6-d323-41eb-a3e1-6cd160198f3c" />
 
 ### With PID Controller
-## R<img width="1023" height="532" alt="Screenshot 2025-11-12 162313" src="https://github.com/user-attachments/assets/d61e0283-69f3-4fca-b715-86f07a3e75df" />
+<img width="1023" height="532" alt="Screenshot 2025-11-12 162313" src="https://github.com/user-attachments/assets/d61e0283-69f3-4fca-b715-86f07a3e75df" />
 
-esult:
+Result:
 Thus the P, PI and PID controllers for the given system was analysed and the following conclusions were arrived using MATLAB. <br>
 ### With-out controller 
-Delay time =         <br>
-Rise time =             <br>
-Peak time =           <br>
-Settling time =            <br>
-Steady State Error =        <br>
+Delay time =0.458       <br>
+Rise time =0.999           <br>
+Peak time =1.56        <br>
+Settling time =1.96       <br>
+Steady State Error =0   <br>
 ### With P Controller 
-Delay time =         <br>
-Rise time =             <br>
-Peak time =           <br>
-Settling time =            <br>
-Steady State Error =        <br>
+Delay time =0.0887         <br>
+Rise time =0.16            <br>
+Peak time = 0.19          <br>
+Settling time =1.1            <br>
+Steady State Error = 0.1        <br>
 ### With PI Controller 
-Delay time =         <br>
-Rise time =             <br>
-Peak time =           <br>
-Settling time =            <br>
-Steady State Error =        <br>
+Delay time = 0.303        <br>
+Rise time = 0.649          <br>
+Peak time = 0.82          <br>
+Settling time = 1.87           <br>
+Steady State Error = 0.87      <br>
 ### With PID Controller 
-Delay time =         <br>
-Rise time =             <br>
-Peak time =           <br>
-Settling time =            <br>
-Steady State Error =        <br>
+Delay time = 0.0243        <br>
+Rise time = 0.0615            <br>
+Peak time = 1.04           <br>
+Settling time = 0.882          <br>
+Steady State Error = 0.018       <br>
 
 
 
