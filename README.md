@@ -84,7 +84,7 @@ Kd=50; <br>
 c3=pid(Kp,Ki,Kd) <br>
 G3=feedback(c3*sys,1) <br>
 subplot(2,2,4) <br>
-step(G3) <br
+step(G3) <br>
 title('Pid-CONTROLLER') <br>
 
 ## Output: 
